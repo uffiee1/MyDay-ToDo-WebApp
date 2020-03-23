@@ -10,11 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyDayApp.Data;
-
-
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Hosting;
 using MyDayApp.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace MyDayApp

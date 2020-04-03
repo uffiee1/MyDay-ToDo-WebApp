@@ -31,13 +31,21 @@ namespace MyDayApp
             services.AddControllersWithViews();
 
             //This is for a Identity Check.
-            services.AddIdentity<AppUserModel, AppRoleModel>(options => { options.User.RequireUniqueEmail = true; })
-                .AddEntityFrameworkStores<AppIdentityContext>();
+            services.AddDbContextPool<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("MyDay")));
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>();
 
-            services.AddDbContext<AppIdentityContext>(cfg =>
-            {
-                cfg.UseSqlServer(Configuration.GetConnectionString("mydaydb"));
-            });
+            //To avoid errors while changing the code while the program is running.
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
+
+            //services.AddIdentity<AppUserModel, AppRoleModel>(options => { options.User.RequireUniqueEmail = true; })
+            //    .AddEntityFrameworkStores<AppIdentityContext>();
+
+            //services.AddDbContext<AppIdentityContext>(cfg =>
+            //{
+            //    cfg.UseSqlServer(Configuration.GetConnectionString("mydaydb"));
+            //});
 
 
             //This is for a Identity Check.
@@ -45,14 +53,13 @@ namespace MyDayApp
             //    .AddEntityFrameworkStores<dbConnection>();
 
 
-            //To avoid errors while changing the code while the program is running.
-            services.AddRazorPages().AddRazorRuntimeCompilation();
+            
 
             // mydaydb database connection (name defined in appsettings.json).
-            dbConnection.SetConnectionString(Configuration.GetConnectionString("mydaydb"));
+            //dbConnection.SetConnectionString(Configuration.GetConnectionString("mydaydb"));
             //services.AddSingleton(dbConnection);
 
-            string teststr = dbConnection.GetConnectionString();
+            //string teststr = dbConnection.GetConnectionString();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

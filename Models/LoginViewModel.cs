@@ -28,7 +28,7 @@ namespace MyDayApp.Models
             set { _Password = value; }
         }
 
-        [Display(Name = "Remember Me")]
+        [Display(Name = "Onthoud mijn Email")]
         public bool Remember
         {
             get { return this._Remember; }

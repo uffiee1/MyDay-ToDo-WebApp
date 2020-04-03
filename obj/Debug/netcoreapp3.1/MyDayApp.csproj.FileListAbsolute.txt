@@ -845,6 +845,12 @@ C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\staticw
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.dll
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.pdb
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.genruntimeconfig.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.csproj.CoreCompileInputs.cache
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cache

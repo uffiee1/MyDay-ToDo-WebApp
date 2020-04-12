@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MyDayApp.Data;
 using MyDayApp.Models;
 
 namespace MyDayApp.Controllers
@@ -54,7 +53,7 @@ namespace MyDayApp.Controllers
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Index", "Dashboard");
                 }
 
                 ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");

@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Welcome to your ToDo List</h1>
+<h1>Index</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -14,12 +14,6 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Event)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartDateTime)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndDateTime)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Location)
@@ -35,12 +29,6 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Event)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDateTime)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDateTime)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Location)

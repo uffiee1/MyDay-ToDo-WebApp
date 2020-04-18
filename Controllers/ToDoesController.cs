@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace MyDayApp.Controllers
 {
@@ -53,10 +54,11 @@ namespace MyDayApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Event,StartDateTime,EndDateTime,Location,Status")] ToDo toDo)
+        public async Task<IActionResult> Create([Bind("ID,Event,Location,Status")] ToDo toDo)
         {
             if (ModelState.IsValid)
             {
+                
                 _context.Add(toDo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -85,7 +87,7 @@ namespace MyDayApp.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Event,StartDateTime,EndDateTime,Location,Status")] ToDo toDo)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Event,Location,Status")] ToDo toDo)
         {
             if (id != toDo.ID)
             {

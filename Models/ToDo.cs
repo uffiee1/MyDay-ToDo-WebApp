@@ -9,8 +9,8 @@ namespace MyDayApp.Models
     {
         private int _ID;
         private string _Event;
-        private DateTime _startDateTime;
-        private DateTime _endDateTime;
+        //private DateTime _startDateTime;
+        //private DateTime _endDateTime;
         private string _Location;
         private int _Status;
 
@@ -26,17 +26,17 @@ namespace MyDayApp.Models
             set { _Event = value; }
         }
 
-        public DateTime StartDateTime
-        {
-            get { return this._startDateTime; }
-            set { _startDateTime = value; }
-        }
+        //public DateTime StartDateTime
+        //{
+        //    get { return this._startDateTime; }
+        //    set { _startDateTime = value; }
+        //}
 
-        public DateTime EndDateTime
-        {
-            get { return this._endDateTime; }
-            set { _endDateTime = value; }
-        }
+        //public DateTime EndDateTime
+        //{
+        //    get { return this._endDateTime; }
+        //    set { _endDateTime = value; }
+        //}
 
         public string Location
         {

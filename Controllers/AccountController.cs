@@ -5,7 +5,6 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MyDayApp.Data;
 using MyDayApp.Models;
 
 namespace MyDayApp.Controllers
@@ -16,13 +15,14 @@ namespace MyDayApp.Controllers
         /// These SignIn field is for logging in and creating users using the identity API
         /// </summary>
         private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public AccountController(UserManager<IdentityUser> userManager,
-            SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
         {
             this.signInManager = signInManager;
+            this.userManager = userManager;
         }
-
+        
         /// <summary>
         /// Logout button by header section
         /// </summary>
@@ -54,7 +54,7 @@ namespace MyDayApp.Controllers
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Dashboard");
+                    return RedirectToAction("Index", "Home");
                 }
 
                 ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
@@ -63,30 +63,46 @@ namespace MyDayApp.Controllers
             return View(model);
         }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
-
-
-
-
->>>>>>> parent of 4c9f086... Completed Login Section
-=======
-
-
-
-
->>>>>>> parent of 4c9f086... Completed Login Section
-        //Registration Action
         [HttpGet]
-        public ActionResult Register()
+        public IActionResult Register()
         {
             return View();
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var result = await userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Index", "Home");
+                }
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+            }
+            return View(model);
+        }
+
+
+
+
+
+
+
+
+        ////Registration Action
+        //[HttpGet]
+        //public ActionResult Register()
+        //{
+        //    return View();
+        //}
         
         ///
         ///Hier onder heb ik mijn code als command gezet omdat het nog niet klaar was en nog errors geeft.

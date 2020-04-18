@@ -845,6 +845,54 @@ C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\staticw
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.dll
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.pdb
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.genruntimeconfig.cache
+<<<<<<< HEAD
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\EntityFramework.SqlServer.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\EntityFramework.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\System.CodeDom.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.csproj.CoreCompileInputs.cache
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cache
+=======
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\Microsoft.Win32.Registry.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Security.AccessControl.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Cng.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Security.Cryptography.Xml.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Security.Permissions.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Security.Principal.Windows.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\refs\System.Windows.Extensions.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\SQLitePCLRaw.core.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\alpine-x64\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-arm\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-arm64\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-armel\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-musl-x64\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\linux-x86\native\libe_sqlite3.so
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libe_sqlite3.dylib
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win-arm\native\e_sqlite3.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\MyDayApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDoes\Create.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDoes\Delete.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDoes\Details.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDoes\Edit.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\obj\Debug\netcoreapp3.1\Razor\Views\ToDoes\Index.cshtml.g.cs
+<<<<<<< HEAD
+>>>>>>> parent of 4c9f086... Completed Login Section
+=======
+>>>>>>> parent of 4c9f086... Completed Login Section

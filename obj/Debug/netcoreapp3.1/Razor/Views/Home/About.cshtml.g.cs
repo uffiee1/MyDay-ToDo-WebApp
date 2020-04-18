@@ -26,8 +26,15 @@ using MyDayApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1eb5b7e7351c0c739882d9d8b498230568cec278", @"/Views/Home/About.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82655f84d4a925a913664ce8889ee50570ba927f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c7f2532def20d60cff1b47c4ec04f6a7f032020b", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_About : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

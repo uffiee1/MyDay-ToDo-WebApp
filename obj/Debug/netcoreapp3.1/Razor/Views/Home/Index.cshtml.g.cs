@@ -26,8 +26,15 @@ using MyDayApp.Models;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\Views\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"28fd8796931260be9c8c7cdc079d51db70ae0056", @"/Views/Home/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"82655f84d4a925a913664ce8889ee50570ba927f", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"c7f2532def20d60cff1b47c4ec04f6a7f032020b", @"/Views/_ViewImports.cshtml")]
     public class Views_Home_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #line hidden
@@ -63,7 +70,7 @@ using MyDayApp.Models;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28fd8796931260be9c8c7cdc079d51db70ae00563253", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "28fd8796931260be9c8c7cdc079d51db70ae00563446", async() => {
                 WriteLiteral("\r\n    <div class=\"container\">\r\n");
                 WriteLiteral("        <br><br><br><hr>\r\n        <h4>\r\n            <p><i>You can <strong>only</strong> see this content if you\'re authenticated.</i></p>\r\n        </h4>\r\n        <hr/>\r\n    </div>\r\n");
             }

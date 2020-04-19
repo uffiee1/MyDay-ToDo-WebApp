@@ -30,6 +30,20 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        @*Dit is voor dropdown menu*@
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Todos 
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropDown" style="background-color:salmon; border:2px solid white; width: 100%; ">
+                                <center>
+                                    <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Index">Todo List</a>
+                                </center>
+                                <center>
+                                    <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Create">Create</a>
+                                </center>
+                            </div>
+                        </li>
                         @if (signInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">

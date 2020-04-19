@@ -22,6 +22,15 @@
     <PackageReference Include="MySql.Data" Version="8.0.19" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Areas\ToDo\Models\" />
+    <Folder Include="Areas\User\Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MyDayApp.DataAccess\MyDayApp.DataAccess.csproj" />
+  </ItemGroup>
+
 
 
 </Project>

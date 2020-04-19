@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pp6NzjQKp1D9EHSLxyJtDILnAvta2YJ6yhRAWFRpa+RI3t6RsL4P5k3i9ISQ9hqFinmaA8RWKvh3tVz1EN6zig==",
+  "dgSpecHash": "hxj2MFWm9MSZZgBnE3Kf6clN3G3uJ04khrdZzr6ikLNZj4nzeiajy66GmsZ7ofsru/mewvYGTD7dvK39UfQUGg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MayDay-ToDo-App\\MyDayApp.csproj",
+  "projectFilePath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDay-ToDo-WebApp\\MyDayApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ufuk\\.nuget\\packages\\bouncycastle.netcore\\1.8.3\\bouncycastle.netcore.1.8.3.nupkg.sha512",
     "C:\\Users\\Ufuk\\.nuget\\packages\\google.protobuf\\3.6.1\\google.protobuf.3.6.1.nupkg.sha512",

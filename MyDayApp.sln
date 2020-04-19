@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDayApp", "MyDayApp.csproj", "{ADA8996E-13BA-4710-BA23-B19F6710FBA0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDayApp.DataAccess", "..\MyDayApp.DataAccess\MyDayApp.DataAccess.csproj", "{D4893FE4-EC4C-497B-9AA3-EEAC2FCFEAF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDayApp.Models", "..\MyDayApp.Models\MyDayApp.Models.csproj", "{6AB9DD7A-A66E-40C7-AFEF-95634EF8341B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{ADA8996E-13BA-4710-BA23-B19F6710FBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADA8996E-13BA-4710-BA23-B19F6710FBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADA8996E-13BA-4710-BA23-B19F6710FBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4893FE4-EC4C-497B-9AA3-EEAC2FCFEAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4893FE4-EC4C-497B-9AA3-EEAC2FCFEAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4893FE4-EC4C-497B-9AA3-EEAC2FCFEAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4893FE4-EC4C-497B-9AA3-EEAC2FCFEAF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AB9DD7A-A66E-40C7-AFEF-95634EF8341B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AB9DD7A-A66E-40C7-AFEF-95634EF8341B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AB9DD7A-A66E-40C7-AFEF-95634EF8341B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AB9DD7A-A66E-40C7-AFEF-95634EF8341B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

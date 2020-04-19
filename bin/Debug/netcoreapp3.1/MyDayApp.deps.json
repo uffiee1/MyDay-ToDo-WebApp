@@ -35,6 +35,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "3.1.3",
           "Microsoft.Extensions.Identity.Stores": "3.1.3",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.2",
+          "MyDayApp.DataAccess": "1.0.0",
           "MySql.Data": "8.0.19",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
@@ -2753,6 +2754,27 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        }
+      },
+      "MyDayApp.DataAccess/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.3",
+          "Microsoft.EntityFrameworkCore": "3.1.3",
+          "MyDayApp.Models": "1.0.0"
+        },
+        "runtime": {
+          "MyDayApp.DataAccess.dll": {}
+        },
+        "compile": {
+          "MyDayApp.DataAccess.dll": {}
+        }
+      },
+      "MyDayApp.Models/1.0.0": {
+        "runtime": {
+          "MyDayApp.Models.dll": {}
+        },
+        "compile": {
+          "MyDayApp.Models.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5795,6 +5817,16 @@
       "sha512": "sha512-Zm2BdeanuncYs3NhCj4c9e1x3EXFzFBVv2wPEc/Dj4ZbI9R8ecLSR5frAsx4zJCPBtKQreQ7Q/KxJEohJZbfzA==",
       "path": "system.xml.xpath.xmldocument/4.0.1",
       "hashPath": "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "MyDayApp.DataAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyDayApp.Models/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

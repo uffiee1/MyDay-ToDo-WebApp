@@ -7,6 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
 using Microsoft.AspNetCore.Http;
+using System;
 
 namespace MyDayApp
 {
@@ -38,7 +39,7 @@ namespace MyDayApp
 
             //To avoid errors while changing the code while the program is running.
             services.AddRazorPages().AddRazorRuntimeCompilation();
-
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +68,7 @@ namespace MyDayApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

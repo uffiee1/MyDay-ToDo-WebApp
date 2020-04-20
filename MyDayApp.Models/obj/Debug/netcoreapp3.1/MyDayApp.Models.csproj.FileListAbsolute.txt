@@ -1,0 +1,36 @@
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.deps.json
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csprojAssemblyReference.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfoInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfo.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.deps.json
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csprojAssemblyReference.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfoInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfo.cs
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.deps.json
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csprojAssemblyReference.cache
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfoInputs.cache
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfo.cs
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.deps.json
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\bin\Debug\netcoreapp3.1\MyDayApp.Models.pdb
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csprojAssemblyReference.cache
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfoInputs.cache
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.AssemblyInfo.cs
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.dll
+C:\Users\Ufuk\source\MyDayApp\MyDayApp.Models\obj\Debug\netcoreapp3.1\MyDayApp.Models.pdb

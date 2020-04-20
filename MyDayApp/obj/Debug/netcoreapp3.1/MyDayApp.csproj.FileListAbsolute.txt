@@ -2445,3 +2445,5 @@ C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\staticwebassets\M
 C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayApp.dll
 C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayApp.pdb
 C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayApp.genruntimeconfig.cache
+C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Account\Login.cshtml.g.cs
+C:\Users\Ufuk\source\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Account\Register.cshtml.g.cs

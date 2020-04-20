@@ -9,7 +9,7 @@ using MyDayApp.Models;
 
 namespace MyDayApp.Controllers
 {
-    [Area("Account")]
+    [Area("User")]
     public class AccountController : Controller
     {
         /// <summary>

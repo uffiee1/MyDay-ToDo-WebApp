@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
 using Microsoft.AspNetCore.Identity;
+using MyDayApp.DataAccess;
 using MySql.Data.MySqlClient;
 
 namespace MyDayApp.Controllers

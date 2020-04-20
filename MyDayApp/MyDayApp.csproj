@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -23,13 +23,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\Admin\Controllers\" />
+    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\ToDo\Models\" />
-    <Folder Include="Areas\User\Models\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MyDayApp.DataAccess\MyDayApp.DataAccess.csproj" />
-    <ProjectReference Include="..\MyDayApp.Models\MyDayApp.Models.csproj" />
   </ItemGroup>
 
 

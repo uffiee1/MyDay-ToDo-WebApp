@@ -6,7 +6,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
 
-namespace MyDayApp.Models
+
+namespace MyDayApp.DataAccess
 {
     public class AppDbContext : IdentityDbContext
     {

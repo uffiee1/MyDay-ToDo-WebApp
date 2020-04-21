@@ -8,3 +8,6 @@ Configuration
 
     Support for ASP.NET Core Identity was added to your project.
     For setup and configuration information, see https://go.microsoft.com/fwlink/?linkid=2116645.
+
+    Bootsrap Icons:
+    https://getbootstrap.com/docs/3.3/components/

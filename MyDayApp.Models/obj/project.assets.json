@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
+      "projectUniqueName": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
       "projectName": "MyDayApp.Models",
-      "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
+      "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
       "packagesPath": "C:\\Users\\Ufuk\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\obj\\",
+      "outputPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

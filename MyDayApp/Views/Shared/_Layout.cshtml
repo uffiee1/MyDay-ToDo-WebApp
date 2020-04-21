@@ -28,24 +28,27 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="About">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Contact">Contact</a>
                         </li>
-                        @*Dit is voor dropdown menu*@
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Todos 
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropDown" style="background-color:salmon; border:2px solid white; width: 100%; ">
-                                <center>
-                                    <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Index">Todo List</a>
-                                </center>
-                                <center>
-                                    <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Create">Create</a>
-                                </center>
-                            </div>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         @if (signInManager.IsSignedIn(User))
                         {
+                            @*Dit is voor dropdown menu van ToDos*@
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Todos
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropDown" style="background-color:salmon; border:2px solid white; width: 100%; ">
+                                    <center>
+                                        <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Index">Todo List</a>
+                                    </center>
+                                    <center>
+                                        <a class="nav-link" asp-area="ToDo" asp-controller="ToDoes" asp-action="Create">Create</a>
+                                    </center>
+                                </div>
+                            </li>
                             <li class="nav-item">
                                 <form method="post" asp-controller="Account" asp-action="Logout">
                                     <button type="submit" class="nav-link" btn btn-link py-0" style="width: auto">

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp\\MyDayApp.csproj": {}
+    "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp\\MyDayApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
+    "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj",
         "projectName": "MyDayApp.DataAccess",
-        "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj",
+        "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj",
         "packagesPath": "C:\\Users\\Ufuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -32,8 +32,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
-                "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj"
+              "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
+                "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj"
               }
             }
           }
@@ -79,14 +79,14 @@
         }
       }
     },
-    "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
+    "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
+        "projectUniqueName": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
         "projectName": "MyDayApp.Models",
-        "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
+        "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj",
         "packagesPath": "C:\\Users\\Ufuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.Models\\obj\\",
+        "outputPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -136,14 +136,14 @@
         }
       }
     },
-    "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp\\MyDayApp.csproj": {
+    "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp\\MyDayApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp\\MyDayApp.csproj",
+        "projectUniqueName": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp\\MyDayApp.csproj",
         "projectName": "MyDayApp",
-        "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp\\MyDayApp.csproj",
+        "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp\\MyDayApp.csproj",
         "packagesPath": "C:\\Users\\Ufuk\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp\\obj\\",
+        "outputPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -164,8 +164,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Ufuk\\source\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj"
+              "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj"
               }
             }
           }

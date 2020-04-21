@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyDayApp.Models;
+using MySqlX.XDevAPI;
 
 namespace MyDayApp.Controllers
 {
@@ -30,10 +31,21 @@ namespace MyDayApp.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout()
+        public async Task<IActionResult> Logout(string returnUrl = null)
         {
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+                await signInManager.SignOutAsync();
+                if (returnUrl != null)
+                {
+                    return RedirectToAction("Login", "Account");
+                }
+                else
+                {
+                    return LocalRedirect(returnUrl);
+                    
+                }
+                
+            //await signInManager.SignOutAsync();
+            //return RedirectToAction("Login", "Account");
         }
 
         //Login

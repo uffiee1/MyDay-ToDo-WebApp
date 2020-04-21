@@ -8,9 +8,30 @@ namespace MyDayApp.Controllers
 {
     public class DashboardController : Controller
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    if (Session["UID"] != null)
+        //    {
+        //        ViewBag.Username = Session["username"];
+        //        return View();
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index", "Account");
+        //    }
+        //}
+
+        //public IActionResult Settings()
+        //{
+        //    if (Session["UID"] != null)
+        //    {
+        //        ViewBag.Username = Session["username"];
+        //        return View(); 
+        //    }
+        //    else
+        //    {
+        //        return RedirectToAction("Index", "Account");
+        //    }
+        //}
     }
 }

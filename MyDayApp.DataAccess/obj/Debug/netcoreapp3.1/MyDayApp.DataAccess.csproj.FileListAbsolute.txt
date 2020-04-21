@@ -17,7 +17,6 @@ C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.DataAccess\obj\Debug\n
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.dll
 C:\Users\Ufuk\Documents\GitHub\MyDay-ToDo-WebApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.pdb
 C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.csprojAssemblyReference.cache
-C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.csproj.CoreCompileInputs.cache
 C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.AssemblyInfoInputs.cache
 C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.AssemblyInfo.cs
 C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.dll
@@ -52,3 +51,4 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.csproj.CopyComplete
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.pdb
+C:\Users\Ufuk\source\Nieuwe map\MyDayApp\MyDayApp.DataAccess\obj\Debug\netcoreapp3.1\MyDayApp.DataAccess.csproj.CoreCompileInputs.cache

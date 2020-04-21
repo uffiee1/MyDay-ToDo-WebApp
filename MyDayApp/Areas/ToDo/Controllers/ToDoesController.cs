@@ -15,7 +15,7 @@ namespace MyDayApp.Controllers
     [Area("ToDo")]
     public class ToDoesController : Controller
     {
-        MySqlConnection conn = new MySqlConnection("Server = localhost; User Id = root; Password = ''; Database = ufukdb");
+        MySqlConnection conn = new MySqlConnection("Server = (LocalDB)\\MSSQLLocalDB;database=mydaydb");
         MySqlDataAdapter adapter = new MySqlDataAdapter();
         private readonly AppDbContext _context;
         string username = "";

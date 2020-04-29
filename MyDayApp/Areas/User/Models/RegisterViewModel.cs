@@ -25,12 +25,16 @@ namespace MyDayApp.Models
             set { _UserID = value; }
         }
 
+        [Display(Name ="First Name")]
+        [Required(AllowEmptyStrings = false, ErrorMessage ="First name is required")]
         public string FirstName
         {
             get { return this._FirstName; }
             set { _FirstName = value; }
         }
 
+        [Display(Name = "Last Name")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Last name is required")]
         public string LastName
         {
             get { return this._Lastname; }
@@ -43,12 +47,17 @@ namespace MyDayApp.Models
             set { _Username = value; }
         }
 
+        [Display(Name ="Email")]
+        [Required(AllowEmptyStrings =false, ErrorMessage ="Email is required")]
+        [DataType(DataType.EmailAddress)]
         public string Email
         {
             get { return this._Email; }
             set { _Email = value; }
         }
 
+        [Required(AllowEmptyStrings =false, ErrorMessage ="Password is required")]
+        [DataType(DataType.Password)]
         public string Password
         {
             get { return this._Password; }

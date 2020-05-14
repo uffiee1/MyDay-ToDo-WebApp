@@ -1,0 +1,9 @@
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.deps.json
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csprojAssemblyReference.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfo.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csproj.CoreCompileInputs.cache

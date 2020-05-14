@@ -4,65 +4,36 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyDayApp.Models
 {
     public class RegisterViewModel
     {
-
-        private int _UserID;
-        private string _FirstName;
-        private string _Lastname;
-        private string _Username;
-        private string _Email;
-        private string _Password;
-
-
         [Key]
-        public int UserID
-        {
-            get { return this._UserID; }
-            set { _UserID = value; }
-        }
+        public int UserID { get; set; }
 
-        [Display(Name ="First Name")]
-        [Required(AllowEmptyStrings = false, ErrorMessage ="First name is required")]
-        public string FirstName
-        {
-            get { return this._FirstName; }
-            set { _FirstName = value; }
-        }
+        [Display(Name = "First Name")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "First name is required")]
+        public string FirstName { get; set; }
 
         [Display(Name = "Last Name")]
         [Required(AllowEmptyStrings = false, ErrorMessage = "Last name is required")]
-        public string LastName
-        {
-            get { return this._Lastname; }
-            set { _Lastname = value; }
-        }
+        public string LastName { get; set; }
 
-        public string Username
-        {
-            get { return this._Username; }
-            set { _Username = value; }
-        }
+        public string Username { get; set; }
 
-        [Display(Name ="Email")]
-        [Required(AllowEmptyStrings =false, ErrorMessage ="Email is required")]
+        [Display(Name = "Email")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Email is required")]
         [DataType(DataType.EmailAddress)]
-        public string Email
-        {
-            get { return this._Email; }
-            set { _Email = value; }
-        }
+        public string Email { get; set; }
 
-        [Required(AllowEmptyStrings =false, ErrorMessage ="Password is required")]
+        [Required(AllowEmptyStrings = false, ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
-        public string Password
-        {
-            get { return this._Password; }
-            set { _Password = value; }
-        }
+        public string Password { get; set; }
 
+        public string RoleName { get; set; }
+
+        public IEnumerable<SelectListItem> RoleItems { get; set; }
     }
 }

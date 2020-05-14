@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
 using MyDayApp.Models;
 
 namespace MyDayApp.Controllers
@@ -17,11 +19,14 @@ namespace MyDayApp.Controllers
         /// </summary>
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
+        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly ILogger _logger;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
+            this.roleManager = roleManager;
         }
         
         /// <summary>
@@ -30,10 +35,10 @@ namespace MyDayApp.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Logout(string returnUrl = null)
+        public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Login", "Account");
         }
 
         //Login
@@ -43,32 +48,45 @@ namespace MyDayApp.Controllers
             return View();
         }
 
-        /// <summary>
-        /// checks whether the correct combination of the entered email address and passwords are correct
-        /// 
-        /// </summary>
 
+        //checks whether the correct combination of the entered email address and passwords are correct
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginViewModel model, string ReturnUrl)
         {
             if (ModelState.IsValid)
             {
+                var user = await userManager.FindByEmailAsync(model.Email);
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
+
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");
+                    if (!string.IsNullOrEmpty(ReturnUrl))
+                    {
+                        return Redirect(ReturnUrl);
+                    }
+                    else
+                    {
+                        return RedirectToAction("Profile", "Dashboard");   
+                    }
                 }
-
                 ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
             }
-
             return View(model);
         }
 
         [HttpGet]
         public IActionResult Register()
         {
-            return View();
+
+            var account = new RegisterViewModel
+            {
+                RoleItems = roleManager.Roles.Select(iR => new SelectListItem
+                {
+                    Text = iR.Name,
+                    Value = iR.Name
+                })
+            };
+            return View(account);
         }
 
         [HttpPost]
@@ -76,11 +94,36 @@ namespace MyDayApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Email, Email = model.Email };
+                var user = new IdentityUser { UserName = model.Username, Email = model.Email, };
                 var result = await userManager.CreateAsync(user, model.Password);
+
+                //IdentityRole identityRole = new IdentityRole
+                //{
+                //    Name = model.RoleName
+                //};
+
+                //result = await roleManager.CreateAsync(identityRole);
                 if (result.Succeeded)
                 {
-                    await signInManager.SignInAsync(user, isPersistent: false);
+                    if (!await roleManager.RoleExistsAsync(Role.Gebruiker))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
+                    }
+                    
+                    //if (!await roleManager.RoleExistsAsync(Role.Administrator))
+                    //{
+                    //    await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
+                    //}
+
+                    //if (model.RoleName == null)
+                    //{
+                    //    await userManager.AddToRoleAsync(user, Role.Gebruiker);
+                    //}
+                    
+                    //await userManager.AddToRoleAsync(user, model.RoleName);
+
+                    await signInManager.SignInAsync(user, false);
+
                     return RedirectToAction("Index", "Home");
                 }
 
@@ -92,143 +135,9 @@ namespace MyDayApp.Controllers
             return View(model);
         }
 
-
-
-
-
-
-
-
-        ////Registration Action
-        //[HttpGet]
-        //public ActionResult Register()
-        //{
-        //    return View();
-        //}
-        
-        ///
-        ///Hier onder heb ik mijn code als command gezet omdat het nog niet klaar was en nog errors geeft.
-        /// Voor nu heb ik normale regsiter pagina. (Is er wel maar werkt niet omdat er geen post actie is.) - (Zie boven)
-        /// Code die onder ligt is als extra features zoals email verificatie,
-        /// wachtwoorden automastish hashen,
-        /// als er een email/username eerder is gemaakt dan komt er melding dat de username/email al bestaad.
-        /// 
-
-        ////Registration POST Action
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public ActionResult Registration(/*[Bind(Exclude = "IsEmailVerified, ActivationCode")]*/ User user)
-        //{
-
-        //    bool Status = false;
-        //    string message;
-
-        //    //Model Validation
-        //    if (ModelState.IsValid)
-        //    {
-        //        #region //Email is already Exist
-        //        var isExist = IsEmailExist(user.Email);
-        //        if (isExist)
-        //        {
-        //            ModelState.AddModelError("EmailExist", "Email already exist");
-        //        }
-        //        #endregion
-
-        //        #region //Generate Activation Code
-        //        user.ActivationCode = Guid.NewGuid();
-        //        #endregion
-
-        //        #region //Password Hashing
-
-        //        user.Password = Crypto.Hash(user.Password);
-        //        user.ConfirmPassword = Crypto.Hash(user.ConfirmPassword);
-        //        #endregion
-
-        //        user.IsEmailVerified = false;
-
-        //        //#region //Save Data to Database
-
-        //        //using (MyDatabaseEntities dc = new MyDatabaseEntities())
-        //        //{
-        //        //    dc.Users.Add(User);
-        //        //    dc.SaveChanges();
-
-        //        //    //Send Email to User
-
-        //        //}
-
-
-        //        //#endregion
-
-
-
-        //    }
-        //    else
-        //    {
-        //        message = "Invalid Request";
-        //    }
-
-        //    //ViewBag.Message = message;
-        //    ViewBag.Status = Status;
-        //    return View(user);
-        //}
-
-        //private bool IsEmailExist(string email)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        ////Verify Email
-
-        ////Verify Email Link
-
-        ////Login
-
-        ////Login POST
-
-        ////Logout
-        ////[NonAction]
-        ////public bool IsEmailExist(string Email)
-        ////{
-        ////    using (db.MyDatabaseEntities dc = new db.MyDatabaseEntities())
-        ////    {
-        ////        dc.Users.Add();
-        ////        dc.SaveChanges();
-        ////    }
-
-        ////}
-
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        ////Verify Account  
-
-        ////[HttpGet]
-        ////public ActionResult VerifyAccount(string id)
-        ////{
-        ////    bool Status = false;
-        ////    using (MyDatabaseEntities dc = new MyDatabaseEntities())
-        ////    {
-        ////        dc.Configuration.ValidateOnSaveEnabled = false; // This line I have added here to avoid 
-        ////        // Confirm password does not match issue on save changes
-        ////        var v = dc.Users.Where(a => a.ActivationCode == new Guid(id)).FirstOrDefault();
-        ////        if (v != null)
-        ////        {
-        ////            v.IsEmailVerified = true;
-        ////            dc.SaveChanges();
-        ////            Status = true;
-        ////        }
-        ////        else
-        ////        {
-        ////            ViewBag.Message = "Invalid Request";
-        ////        }
-        ////    }
-        ////    ViewBag.Status = Status;
-        ////    return View();
-        ////}
-
-
+        public IActionResult AccesDenied()
+        {
+            return View();
+        }
     }
 }

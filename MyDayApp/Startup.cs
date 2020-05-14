@@ -7,11 +7,13 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MyDayApp.DataAccess;
+using MyDayApp.Models;
 
 namespace MyDayApp
 {
@@ -30,10 +32,24 @@ namespace MyDayApp
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer
                 (Configuration.GetConnectionString("MyDay")));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AppDbContext>();
+            //This is for a Identity Check.
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AppDbContext>();
 
-            services.AddControllersWithViews();
-            services.AddRazorPages();
+            //This is for a Identity Check.
+            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+
+            //Use to changing the code while the program is running.
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+
+   //        services.AddControllersWithViews(options =>
+   //{
+   //     options.Filters.Add(typeof(Login));
+   // });
+
+            //services.AddControllersWithViews(o => o.Filters.Add(new AuthorizeFilter()));
+
+        services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +78,8 @@ namespace MyDayApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{area=User}/{controller=Account}/{action=Login}/{id?}");
+                //pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

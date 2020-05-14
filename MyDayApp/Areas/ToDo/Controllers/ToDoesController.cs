@@ -15,11 +15,11 @@ namespace MyDayApp.Controllers
     [Area("ToDo")]
     public class ToDoesController : Controller
     {
-        MySqlConnection conn = new MySqlConnection("Server = (LocalDB)\\MSSQLLocalDB;database=mydaydb");
-        MySqlDataAdapter adapter = new MySqlDataAdapter();
+        //MySqlConnection conn = new MySqlConnection("Server = (LocalDB)\\MSSQLLocalDB;database=mydaydb");
+        //MySqlDataAdapter adapter = new MySqlDataAdapter();
         private readonly AppDbContext _context;
-        string username = "";
-        string currentUserId = "0";
+        //string username = "";
+        //string currentUserId = "0";
 
         public ToDoesController(AppDbContext context)
         {

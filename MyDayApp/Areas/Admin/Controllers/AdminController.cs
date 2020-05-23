@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using MyDayApp.Areas.User.Models;
 using MyDayApp.Models;
 
 namespace MyDayApp.Areas.Admin.Controllers
@@ -29,14 +28,14 @@ namespace MyDayApp.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRole(CreateRoleModel model)
+        public async Task<IActionResult> CreateRole(Role model)
         {
             if (ModelState.IsValid)
             {
                 // We just need to specify a unique role name to create a new role
                 IdentityRole identityRole = new IdentityRole
                 {
-                    Name = model.RoleNamee
+                    Name = model.RoleName
                 };
 
                 // Saves the role in the underlying AspNetRoles table

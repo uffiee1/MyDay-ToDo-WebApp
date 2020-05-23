@@ -31,12 +31,6 @@ namespace MyDayApp.Models
         [Required(AllowEmptyStrings = false, ErrorMessage = "Password is required")]
         [DataType(DataType.Password)]
         public string Password { get; set; }
-        
-        [NotMapped] // Does not effect with your database
-        [Compare("Password")]
-        [Required(AllowEmptyStrings = false, ErrorMessage = "Password is required")]
-        [DataType(DataType.Password)]
-        public string ConfirmPassword { get; set; }
 
         public string RoleName { get; set; }
 

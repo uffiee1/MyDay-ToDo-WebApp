@@ -17,12 +17,12 @@ namespace MyDayApp.Controllers
         /// <summary>
         /// These SignIn field is for logging in and creating users using the identity API
         /// </summary>
-        private readonly SignInManager<User> signInManager;
-        private readonly UserManager<User> userManager;
+        private readonly SignInManager<IdentityUser> signInManager;
+        private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
         private readonly ILogger _logger;
 
-        public AccountController(UserManager<User> userManager, SignInManager<User> signInManager, RoleManager<IdentityRole> roleManager)
+        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
             this.signInManager = signInManager;
             this.userManager = userManager;
@@ -55,7 +55,7 @@ namespace MyDayApp.Controllers
         {
             if (ModelState.IsValid)
             {
-               // var user = await userManager.FindByEmailAsync(model.Email);
+                var user = await userManager.FindByEmailAsync(model.Email);
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
 
                 if (result.Succeeded)
@@ -94,8 +94,8 @@ namespace MyDayApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Username, Email = model.Email, };
-                var result = await userManager.CreateAsync((User)user, model.Password);
+                var user = new IdentityUser { UserName = model.Username, Email = model.Email, };
+                var result = await userManager.CreateAsync(user, model.Password);
 
                 //IdentityRole identityRole = new IdentityRole
                 //{
@@ -109,18 +109,18 @@ namespace MyDayApp.Controllers
                     {
                         await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
                     }
+                    
+                    //if (!await roleManager.RoleExistsAsync(Role.Administrator))
+                    //{
+                    //    await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
+                    //}
 
-                    if (!await roleManager.RoleExistsAsync(Role.Administrator))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
-                    }
-
-                    if (model.RoleName == null)
-                    {
-                        await userManager.AddToRoleAsync(user, Role.Gebruiker);
-                    }
-
-                    await userManager.AddToRoleAsync(user, model.RoleName);
+                    //if (model.RoleName == null)
+                    //{
+                    //    await userManager.AddToRoleAsync(user, Role.Gebruiker);
+                    //}
+                    
+                    //await userManager.AddToRoleAsync(user, model.RoleName);
 
                     await signInManager.SignInAsync(user, false);
 

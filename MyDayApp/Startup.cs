@@ -33,11 +33,11 @@ namespace MyDayApp
                 (Configuration.GetConnectionString("MyDay")));
 
             //This is for a Identity Check.
-            services.AddIdentity<User, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<AppDbContext>();
 
             //This is for a Identity Check.
-            //services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
             //Use to changing the code while the program is running.
             services.AddRazorPages().AddRazorRuntimeCompilation();

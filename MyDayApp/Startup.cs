@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -12,7 +13,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using MyDayApp.BusinessLogic;
+using MyDayApp.BusinessLogic.Interface;
 using MyDayApp.DataAccess;
+using MyDayApp.DataAccess.Data.Repository;
+using MyDayApp.DataAccess.Data.Repository.IRepository;
 using MyDayApp.Models;
 
 namespace MyDayApp
@@ -34,22 +40,36 @@ namespace MyDayApp
 
             //This is for a Identity Check.
             services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<AppDbContext>();
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders()
+                .AddDefaultUI()
+                .AddDefaultTokenProviders();
+
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequiredLength = 3;
+                options.SignIn.RequireConfirmedEmail = true;
+            });
+
+            //services.AddScoped<IToDoLogic, ToDoLogic>();
+            //services.AddScoped<ILogger, Logger<ToDo>>();
+            //services.AddControllersWithViews().AddNewtonsoftJson();
+            //services.AddRazorPages().AddRazorRuntimeCompilation();
+            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/User/Account/Login";
+                options.AccessDeniedPath = "/User/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+            });
+
 
             //This is for a Identity Check.
-            //services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
+            //services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
-            //Use to changing the code while the program is running.
-            services.AddRazorPages().AddRazorRuntimeCompilation();
-
-   //        services.AddControllersWithViews(options =>
-   //{
-   //     options.Filters.Add(typeof(Login));
-   // });
 
             //services.AddControllersWithViews(o => o.Filters.Add(new AuthorizeFilter()));
-
-        services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,7 +98,7 @@ namespace MyDayApp
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{area=User}/{controller=Account}/{action=Login}/{id?}");
+                    pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
                 //pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });

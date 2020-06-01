@@ -51,23 +51,17 @@ namespace MyDayApp.Controllers
 
         //checks whether the correct combination of the entered email address and passwords are correct
         [HttpPost]
-        public async Task<IActionResult> Login(LoginViewModel model, string ReturnUrl)
+        public async Task<IActionResult> Login(LoginViewModel model)
         {
             if (ModelState.IsValid)
             {
-                var user = await userManager.FindByEmailAsync(model.Email);
+               
                 var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
 
                 if (result.Succeeded)
                 {
-                    if (!string.IsNullOrEmpty(ReturnUrl))
-                    {
-                        return Redirect(ReturnUrl);
-                    }
-                    else
-                    {
-                        return RedirectToAction("Profile", "Dashboard");   
-                    }
+                    return RedirectToAction("Index", "Home");   
+                    
                 }
                 ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
             }
@@ -94,8 +88,8 @@ namespace MyDayApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = model.Username, Email = model.Email, };
-                var result = await userManager.CreateAsync(user, model.Password);
+                var user = new User { UserName = model.Username, Email = model.Email, };
+                var result = await userManager.CreateAsync((User)user, model.Password);
 
                 //IdentityRole identityRole = new IdentityRole
                 //{
@@ -109,18 +103,18 @@ namespace MyDayApp.Controllers
                     {
                         await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
                     }
-                    
-                    //if (!await roleManager.RoleExistsAsync(Role.Administrator))
-                    //{
-                    //    await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
-                    //}
+  if (!await roleManager.RoleExistsAsync(Role.Administrator))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
+                    }
+                  
 
-                    //if (model.RoleName == null)
-                    //{
-                    //    await userManager.AddToRoleAsync(user, Role.Gebruiker);
-                    //}
-                    
-                    //await userManager.AddToRoleAsync(user, model.RoleName);
+                    if (model.RoleName == null)
+                    {
+                        await userManager.AddToRoleAsync(user, Role.Gebruiker);
+                    }
+
+                    await userManager.AddToRoleAsync(user, model.RoleName);
 
                     await signInManager.SignInAsync(user, false);
 

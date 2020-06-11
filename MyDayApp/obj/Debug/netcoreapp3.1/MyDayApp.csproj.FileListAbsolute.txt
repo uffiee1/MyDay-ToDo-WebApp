@@ -865,3 +865,8 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayAp
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\User\Index.cshtml.g.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Profile\EditProfile.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\CreateRole.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\EditUserRole.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\Index.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\NotFound.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\RoleEdit.cshtml.g.cs

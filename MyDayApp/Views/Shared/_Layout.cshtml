@@ -65,10 +65,12 @@
                             @*<li class="nav-item">
                                 <a class="nav-link text-white" asp-area="Admin" asp-controller="Admin" asp-action="CreateRole">Roles</a>
                             </li>*@
-                            <a class="dropdown-item" asp-area="Admin" asp-controller="Admin"
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Role"
                                asp-action="CreateRole">New Role</a>
-                            <a class="dropdown-item" asp-area="Admin" asp-controller="Home" 
-                               asp-action="ListUsers">Users</a>
+
+                            <a class="dropdown-item" asp-area="Admin" asp-controller="Role" 
+                               asp-action="Index">User Roles</a>
+
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Admin"
                                asp-action="ListRoles">Roles</a>
                         </div>

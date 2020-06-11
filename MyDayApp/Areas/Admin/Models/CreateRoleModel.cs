@@ -4,12 +4,13 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MyDayApp.Areas.User.Models
+namespace MyDayApp.Areas.Admin.Models
 {
     public partial class CreateRoleModel
     {
+        [Key]
         [Required]
         [Display(Name = "Role")]
-        public string RoleNamee { get; set; }
+        public string RoleName { get; set; }
     }
 }

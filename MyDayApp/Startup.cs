@@ -14,11 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MyDayApp.BusinessLogic;
-using MyDayApp.BusinessLogic.Interface;
 using MyDayApp.DataAccess;
-using MyDayApp.DataAccess.Data.Repository;
-using MyDayApp.DataAccess.Data.Repository.IRepository;
 using MyDayApp.Models;
 
 namespace MyDayApp
@@ -39,30 +35,24 @@ namespace MyDayApp
                 (Configuration.GetConnectionString("MyDay")));
 
             //This is for a Identity Check.
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<AppDbContext>()
-                .AddDefaultTokenProviders()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
-            services.Configure<IdentityOptions>(options =>
-            {
-                options.Password.RequiredLength = 3;
-                options.SignIn.RequireConfirmedEmail = true;
-            });
+            //services.Configure<IdentityOptions>(options =>
+            //{
+            //    options.Password.RequiredLength = 6;
+            //    options.SignIn.RequireConfirmedEmail = false;
+            //});
 
-            //services.AddScoped<IToDoLogic, ToDoLogic>();
-            //services.AddScoped<ILogger, Logger<ToDo>>();
-            //services.AddControllersWithViews().AddNewtonsoftJson();
-            //services.AddRazorPages().AddRazorRuntimeCompilation();
-            //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = "/User/Account/Login";
-                options.AccessDeniedPath = "/User/Account/AccessDenied";
-                options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-            });
+            //services.ConfigureApplicationCookie(options =>
+            //{
+            //    options.LoginPath = "/User/Account/Login";
+            //    options.AccessDeniedPath = "/User/Account/AccessDenied";
+            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+            //});
 
 
             //This is for a Identity Check.

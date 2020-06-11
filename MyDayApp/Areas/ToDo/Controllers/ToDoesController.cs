@@ -1,25 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
 using Microsoft.AspNetCore.Identity;
 using MyDayApp.DataAccess;
-using MySql.Data.MySqlClient;
+using Org.BouncyCastle.Bcpg;
 
 namespace MyDayApp.Controllers
 {
     [Area("ToDo")]
     public class ToDoesController : Controller
     {
-        //MySqlConnection conn = new MySqlConnection("Server = (LocalDB)\\MSSQLLocalDB;database=mydaydb");
-        //MySqlDataAdapter adapter = new MySqlDataAdapter();
         private readonly AppDbContext _context;
-        //string username = "";
-        //string currentUserId = "0";
+
+
+        [BindProperty] public ToDo Todo { get; set; }
+
 
         public ToDoesController(AppDbContext context)
         {
@@ -29,25 +31,19 @@ namespace MyDayApp.Controllers
         // GET: ToDoes
         public async Task<IActionResult> Index()
         {
-            //string query = $"SELECT * FROM `users` WHERE `UsernameID` = '{username}'";
-            //MySqlCommand comm = new MySqlCommand(query, conn);
-            //conn.Open();
-            //MySqlDataReader reader = comm.ExecuteReader();
-            //while (reader.Read())
-            //{
-            //    Gebeurtenis g = new Gebeurtenis();
-            //    g.ID = reader.GetValue(0).ToString();
-            //    g.Event = reader.GetValue(1).ToString();
-            //    g.Date = reader.GetValue(2).ToString();
-            //    g.EndDate = reader.GetValue(3).ToString();
-            //    g.Location = reader.GetValue(4).ToString();
-            //    g.UsernameId = reader.GetValue(5).ToString();
-            //    g.Status = reader.GetValue(6).ToString();
-            //}
-            //reader.Close();
-            //conn.Close();
-
-            return View(await _context.ToDo.ToListAsync());
+            object result;
+            var claimsIdentity = (ClaimsIdentity) User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            if (User.IsInRole(Role.Administrator))
+            {
+                result  =  await _context.ToDo.ToListAsync();
+            }
+            else
+            { 
+               result =  await _context.ToDo.Where(user => user.User.Id == claim.Value).ToListAsync();
+            }
+            
+            return View(result);
         }
 
         // GET: ToDoes/Details/5
@@ -71,18 +67,23 @@ namespace MyDayApp.Controllers
         // GET: ToDoes/Create
         public IActionResult Create()
         {
-            return View();
+            var todo = new ToDo();
+            return View(todo);
         }
 
         // POST: ToDoes/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,Event,Location,Status")] ToDo toDo)
+        public async Task<IActionResult> Create( ToDo toDo)
         {
             if (ModelState.IsValid)
             {
+                var claimsIdentity = (ClaimsIdentity) User.Identity;
+                var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+                toDo.User = _context.User.FirstOrDefault(a => a.Id == claim.Value);
 
-                 
+                toDo.UserId = claim.Value;
+
                 _context.Add(toDo);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -90,6 +91,7 @@ namespace MyDayApp.Controllers
             return View(toDo);
         }
 
+        //[Authorize(Roles = Role.Gebruiker)]
         // GET: ToDoes/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -109,7 +111,7 @@ namespace MyDayApp.Controllers
         // POST: ToDoes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Event,Location,Status")] ToDo toDo)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,Event,Location,Status,UserId")] ToDo toDo)
         {
             if (id != toDo.ID)
             {
@@ -118,6 +120,11 @@ namespace MyDayApp.Controllers
 
             if (ModelState.IsValid)
             {
+               
+                var claimsIdentity = (ClaimsIdentity) User.Identity;
+                var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+                toDo.User = _context.User.FirstOrDefault(a => a.Id == claim.Value);
+              
                 try
                 {
                     _context.Update(toDo);

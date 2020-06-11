@@ -19,5 +19,7 @@ namespace MyDayApp.DataAccess
         public DbSet<User> User { get; set; }
 
         public DbSet<ToDo> ToDo { get; set; }
+        public DbSet<Label> Label { get; set; }
+        public DbSet<Status> Status { get; set; }
     }
 }

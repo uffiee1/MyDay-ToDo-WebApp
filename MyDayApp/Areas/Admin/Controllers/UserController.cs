@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.DataAccess;
-using MyDayApp.DataAccess.Data.Repository.IRepository;
 using MyDayApp.Models;
 
 namespace MyDayApp.Areas.Admin.Controllers
@@ -16,14 +15,12 @@ namespace MyDayApp.Areas.Admin.Controllers
     [Authorize(Roles = Role.Administrator)]
     public class UserController : Controller
     {
-        private readonly IUnitOfWork _unitOfWork;
         private readonly AppDbContext _db;
         private readonly AppDbContext _context;
 
 
-        public UserController(IUnitOfWork unitOfWork, AppDbContext db, AppDbContext context)
+        public UserController(AppDbContext db, AppDbContext context)
         {
-            _unitOfWork = unitOfWork;
             _db = db;
             _context = context;
         }

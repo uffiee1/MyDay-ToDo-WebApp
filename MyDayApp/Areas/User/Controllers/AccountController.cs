@@ -20,7 +20,6 @@ namespace MyDayApp.Controllers
         private readonly SignInManager<IdentityUser> signInManager;
         private readonly UserManager<IdentityUser> userManager;
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly ILogger _logger;
 
         public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
         {
@@ -60,7 +59,7 @@ namespace MyDayApp.Controllers
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Index", "Home");   
+                    return RedirectToAction("Index", "Home");
                     
                 }
                 ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
@@ -91,6 +90,15 @@ namespace MyDayApp.Controllers
                 var user = new User { UserName = model.Username, Email = model.Email, };
                 var result = await userManager.CreateAsync((User)user, model.Password);
 
+                if (!await roleManager.RoleExistsAsync(Role.Gebruiker))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
+                }
+                if (!await roleManager.RoleExistsAsync(Role.Administrator))
+                {
+                    await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
+                }
+
                 //IdentityRole identityRole = new IdentityRole
                 //{
                 //    Name = model.RoleName
@@ -99,16 +107,6 @@ namespace MyDayApp.Controllers
                 //result = await roleManager.CreateAsync(identityRole);
                 if (result.Succeeded)
                 {
-                    if (!await roleManager.RoleExistsAsync(Role.Gebruiker))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
-                    }
-  if (!await roleManager.RoleExistsAsync(Role.Administrator))
-                    {
-                        await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
-                    }
-                  
-
                     if (model.RoleName == null)
                     {
                         await userManager.AddToRoleAsync(user, Role.Gebruiker);
@@ -129,9 +127,9 @@ namespace MyDayApp.Controllers
             return View(model);
         }
 
-        public IActionResult AccesDenied()
-        {
-            return View();
-        }
+        //public IActionResult AccesDenied()
+        //{
+        //    return View();
+        //}
     }
 }

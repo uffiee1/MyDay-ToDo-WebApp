@@ -8,16 +8,16 @@ namespace MyDayApp.Models
 {
     public class LoginViewModel
     {
-        private string _Email;
+        private string _Username;
         private string _Password;
         private bool _Remember;
 
         [Required]
-        [EmailAddress]
-        public string Email
+        //[EmailAddress]
+        public string Username
         {
-            get { return this._Email; }
-            set { _Email = value; }
+            get { return this._Username; }
+            set { _Username = value; }
         }
 
         [Required]

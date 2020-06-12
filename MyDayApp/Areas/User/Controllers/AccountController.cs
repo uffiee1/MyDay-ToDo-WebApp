@@ -55,14 +55,14 @@ namespace MyDayApp.Controllers
             if (ModelState.IsValid)
             {
                
-                var result = await signInManager.PasswordSignInAsync(model.Email, model.Password, model.Remember, false);
+                var result = await signInManager.PasswordSignInAsync(model.Username, model.Password, model.Remember, false);
 
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index", "Home");
                     
                 }
-                ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
+                ModelState.AddModelError(string.Empty, "Username of Wachtwoord is incorrect. Probeer het opnieuw.");
             }
             return View(model);
         }

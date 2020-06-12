@@ -14,5 +14,6 @@
     <_SelectedScaffolderID>IdentityScaffolder</_SelectedScaffolderID>
     <_SelectedScaffolderCategoryPath>root/Identity</_SelectedScaffolderCategoryPath>
     <WebStackScaffolding_LayoutPageFile>~/Views/Shared/_Layout.cshtml</WebStackScaffolding_LayoutPageFile>
+    <NameOfLastUsedPublishProfile>MyDayAppToDo - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>

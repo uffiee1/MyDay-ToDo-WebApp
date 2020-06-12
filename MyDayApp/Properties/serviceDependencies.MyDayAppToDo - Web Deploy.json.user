@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-06-12T00:19:34.8350402Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "MyDayAppToDo"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "dc127bf6-0909-43f7-a44c-b64a2facb847"
+    }
+  }
+}

@@ -870,3 +870,5 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\A
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\Index.cshtml.g.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\NotFound.cshtml.g.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\Role\RoleEdit.cshtml.g.cs
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.MyDayAppToDo - Web Deploy.json

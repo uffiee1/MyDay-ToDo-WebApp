@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyDayApp.Models
 {
@@ -16,13 +17,19 @@ namespace MyDayApp.Models
 
         public string Location { get; set; }
 
-        public int Status { get; set; }
+        public string Status { get; set; }
+
+        //public IEnumerable<SelectListItem> Status { get; set; }
+
+        public IEnumerable<SelectListItem> StatusItems { get; set; }
 
         public string UserId { get; set; }
 
         [ForeignKey("UserId")]
         public User User { get; set; }
-        
+
+        public string Label { get; set; }
+
         //[Required]
         public DataType StartDateTime { get; set; }
 

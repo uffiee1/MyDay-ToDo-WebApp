@@ -267,14 +267,17 @@ namespace MyDayApp.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Label")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StartDateTime")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");

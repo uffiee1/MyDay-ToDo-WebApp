@@ -42,19 +42,20 @@ namespace MyDayApp
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
 
-            //services.Configure<IdentityOptions>(options =>
-            //{
-            //    options.Password.RequiredLength = 6;
-            //    options.SignIn.RequireConfirmedEmail = false;
-            //});
+            //Add Minimal Requirements
+            services.Configure<IdentityOptions>(options =>
+            {
+                options.Password.RequiredLength = 8;
+                options.SignIn.RequireConfirmedEmail = false;
+            });
 
-
-            //services.ConfigureApplicationCookie(options =>
-            //{
-            //    options.LoginPath = "/User/Account/Login";
-            //    options.AccessDeniedPath = "/User/Account/AccessDenied";
-            //    options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-            //});
+            //Add Cookie options
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/User/Account/Login";
+                options.AccessDeniedPath = "/User/Account/AccessDenied";
+                options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+            });
 
 
             //This is for a Identity Check.

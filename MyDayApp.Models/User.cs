@@ -1,10 +1,11 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Identity;
 
 namespace MyDayApp.Models
 {
-    public class User : IdentityUser
+    public class User : IdentityUser, IUser
     {
         public string FirstName { get; set; }
 

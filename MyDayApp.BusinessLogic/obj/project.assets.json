@@ -2974,10 +2974,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.DataAccess.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "MyDayApp.Models/1.0.0": {
         "type": "project",
@@ -2995,10 +2992,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.Models.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9014,7 +9008,8 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
-      "MyDayApp.DataAccess >= 1.0.0"
+      "MyDayApp.DataAccess >= 1.0.0",
+      "MyDayApp.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -9052,6 +9047,9 @@
           "projectReferences": {
             "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
               "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj"
+            },
+            "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
+              "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj"
             }
           }
         }
@@ -9087,9 +9085,6 @@
           }
         ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

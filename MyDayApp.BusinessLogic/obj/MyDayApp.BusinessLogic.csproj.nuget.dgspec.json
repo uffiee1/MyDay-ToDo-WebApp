@@ -34,6 +34,9 @@
             "projectReferences": {
               "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj": {
                 "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.DataAccess\\MyDayApp.DataAccess.csproj"
+              },
+              "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj": {
+                "projectPath": "C:\\Users\\Ufuk\\Documents\\GitHub\\MyDayApp\\MyDayApp.Models\\MyDayApp.Models.csproj"
               }
             }
           }
@@ -69,9 +72,6 @@
             }
           ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -173,9 +173,6 @@
             }
           ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
@@ -265,9 +262,6 @@
             }
           ],
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

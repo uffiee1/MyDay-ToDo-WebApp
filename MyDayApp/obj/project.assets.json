@@ -3692,7 +3692,8 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "MyDayApp.DataAccess": "1.0.0"
+          "MyDayApp.DataAccess": "1.0.0",
+          "MyDayApp.Models": "1.0.0"
         },
         "compile": {
           "bin/placeholder/MyDayApp.BusinessLogic.dll": {}

@@ -44,7 +44,8 @@ namespace MyDayApp.Controllers
         [HttpGet]
         public IActionResult Login()
         {
-            return View();
+            var model = new LoginViewModel();
+            return View(model);
         }
 
 
@@ -105,6 +106,7 @@ namespace MyDayApp.Controllers
                 //};
 
                 //result = await roleManager.CreateAsync(identityRole);
+
                 if (result.Succeeded)
                 {
                     if (model.RoleName == null)

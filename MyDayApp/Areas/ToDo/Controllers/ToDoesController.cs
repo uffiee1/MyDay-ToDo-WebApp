@@ -31,6 +31,7 @@ namespace MyDayApp.Controllers
         // GET: ToDoes
         public async Task<IActionResult> Index()
         {
+            //Lamda Expression
             object result;
             var claimsIdentity = (ClaimsIdentity) User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);

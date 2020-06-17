@@ -2971,10 +2971,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.Models.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },
@@ -9093,9 +9090,6 @@
           }
         ],
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

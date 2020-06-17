@@ -11,9 +11,7 @@ namespace MyDayApp.Models
         [Display(Name = "Role")]
         public string RoleName { get; set; }
 
-
         public const string Administrator = "Admin";
         public const string Gebruiker = "User";
-
     }
 }

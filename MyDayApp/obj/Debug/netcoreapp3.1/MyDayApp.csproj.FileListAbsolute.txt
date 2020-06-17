@@ -801,8 +801,6 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayAp
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\MyDayApp.genruntimeconfig.cache
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewImports.cshtml.g.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Dashboard\Profile.cshtml.g.cs
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\obj\Debug\netcoreapp3.1\Razor\Areas\User\Views\Dashboard\Settings.cshtml.g.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.Workspaces.dll

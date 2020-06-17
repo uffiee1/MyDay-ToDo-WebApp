@@ -26,6 +26,7 @@
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
           "MyDayApp.DataAccess": "1.0.0",
+          "MyDayApp.Models": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions.Reference": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies.Reference": "3.1.0.0",

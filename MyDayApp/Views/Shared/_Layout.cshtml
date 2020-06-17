@@ -56,8 +56,8 @@
                 @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                 {
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropDown" 
+                           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Manage
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -72,11 +72,22 @@
                                asp-action="Index">User Roles</a>
 
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Admin"
-                               asp-action="ListRoles">Roles</a>
+                               asp-action="ListUsers">Users</a>
                         </div>
                     </li>
                 }
                 
+          
+                
+
+                
+                
+                
+                
+                
+                
+                
+
 
 
 
@@ -98,7 +109,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" asp-area="User" asp-controller="Dashboard" asp-action="Profile">Profile</a>
+                        <a class="nav-link text-white" asp-area="User" asp-controller="Profile" asp-action="EditProfile">Profile</a>
                     </li>
 
                     @*<li class="nav-item">
@@ -136,7 +147,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; Copyright 2020 @*- <a class="navbar-brand" href="#"><img src="./Assets/MyDayLogo.png" alt="logo">*@</a>
+            &copy; Copyright 2020 @*- <a class="navbar-brand" href="#"><img src="./Assets/MyDayLogo.png" alt="logo"></a>*@
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

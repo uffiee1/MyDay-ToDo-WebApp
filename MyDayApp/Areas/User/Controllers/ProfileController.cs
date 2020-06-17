@@ -40,6 +40,7 @@ namespace MyDayApp.Areas.User.Controllers
                 //Surname = user.Surname,
                 Email = user.Email,
                 UserName = user.UserName,
+                Password = user.PasswordHash
                 
                 //Age = user.Age
             };
@@ -66,6 +67,7 @@ namespace MyDayApp.Areas.User.Controllers
                 //user.SurName = model.Surname;
                 user.Email = model.Email;
                 //user.Age = model.Age;
+                user.PasswordHash = model.Password;
                 
                 
                 var result = await userManager.UpdateAsync(user);
@@ -79,18 +81,9 @@ namespace MyDayApp.Areas.User.Controllers
                 {
                     ModelState.AddModelError("", error.Description);
                 }
-                
             }
             
             return View(model);
         }
-
-
-
-
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
     }
 }

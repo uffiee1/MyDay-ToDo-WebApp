@@ -6,8 +6,10 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using MyDayApp.Areas.Admin.Models;
+using MyDayApp.BusinessLogic.AdminLogic.Interfaces;
 using MyDayApp.DataAccess;
 using MyDayApp.Models;
+
 
 namespace MyDayApp.Areas.Admin.Controllers
 {
@@ -16,12 +18,18 @@ namespace MyDayApp.Areas.Admin.Controllers
     public class RoleController : Controller
     {
         private readonly RoleManager<IdentityRole> roleManager;
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<MyDayApp.Models.User> userManager;
+        private readonly IRoleLogic _roleLogic;
 
-        public RoleController(RoleManager<IdentityRole> roleManager, UserManager<IdentityUser> userManager)
+        public RoleController(
+            RoleManager<IdentityRole> roleManager, 
+            UserManager<MyDayApp.Models.User> userManager,
+            IRoleLogic roleLogic)
         {
             this.roleManager = roleManager;
             this.userManager = userManager;
+            this.userManager = userManager;
+            this._roleLogic = roleLogic;
         }
 
 
@@ -48,6 +56,8 @@ namespace MyDayApp.Areas.Admin.Controllers
                 {
                     Name = model.RoleName
                 };
+
+                //await _roleLogic.CreateRole();
 
                 // Saves the role in the underlying AspNetRoles table
                 IdentityResult result = await roleManager.CreateAsync(identityRole);
@@ -88,7 +98,7 @@ namespace MyDayApp.Areas.Admin.Controllers
             foreach (var user in userManager.Users)
             {
                 // If the user is in this role, add the username to
-                // Users property of EditRoleViewModel. This model
+                // Users property of RoleEditModel. This model
                 // object is then passed to the view for display
                 if (await userManager.IsInRoleAsync(user, role.Name))
                 {

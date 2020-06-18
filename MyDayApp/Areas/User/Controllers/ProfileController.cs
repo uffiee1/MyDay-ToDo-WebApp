@@ -13,9 +13,9 @@ namespace MyDayApp.Areas.User.Controllers
     [Area("User")]
     public class ProfileController : Controller
     {
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<MyDayApp.Models.User> userManager;
 
-        public ProfileController(UserManager<IdentityUser> userManager)
+        public ProfileController(UserManager<MyDayApp.Models.User> userManager)
         {
             this.userManager = userManager;
         }

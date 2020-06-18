@@ -1,9 +1,9 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
-using MyDayApp.BusinessLogic.AccountLogic.Interfaces;
+using MyDayApp.BusinessLogic.AdminLogic.Interfaces;
 using MyDayApp.Models;
 
-namespace MyDayApp.BusinessLogic.AccountLogic
+namespace MyDayApp.BusinessLogic.AdminLogic
 {
     public class RoleLogic : IRoleLogic
     {

@@ -12,9 +12,9 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="ID" />
+            <input type="hidden" asp-for="ToDoID" />
             <div class="form-group">
-                <label asp-for="Event" class="control-label"></label>
+                <label asp-for="Event" class="control-label">Task:*</label>
                 <input asp-for="Event" class="form-control" />
                 <span asp-validation-for="Event" class="text-danger"></span>
             </div>
@@ -24,33 +24,60 @@
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
 
+            @*<div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            @Html.DropDownListFor(m => m.Status, Model.StatusItems, "Status", new { @class = "form-control" })
+        </div>*@
+
+
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                @Html.DropDownListFor(m => m.Status, Model.StatusItems, "Choose a Role", new { @class = "form-control" })
+                <label asp-for="Status">Status:*</label>
+                <select asp-for="Status" class="form-control">
+                    <option value="Not started yet">Not started yet</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </select>
+            </div>
+
+
+            @*<div class="form-group">
+            <label asp-for="Status" class="control-label"></label>
+            <input asp-for="Status" class="form-control" />
+            <span asp-validation-for="Status" class="text-danger"></span>
+        </div>*@
+            @*<div class="form-group">
+            <label asp-for="StartDateTime" class="control-label"></label>
+            <input asp-for="StartDateTime" class="form-control" />
+            <span asp-validation-for="StartDateTime" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EndDateTime" class="control-label"></label>
+            <input asp-for="EndDateTime" class="form-control" />
+            <span asp-validation-for="EndDateTime" class="text-danger"></span>
+        </div>*@
+
+            <div class="form-group">
+                <label asp-for="StartDateTime">Start Date:</label>
+                <input type="date" id="StartTime" name="StartTime">
+                <span asp-validation-for="StartDateTime" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
-                <span asp-validation-for="Status" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StartDateTime" class="control-label"></label>
-                <input asp-for="StartDateTime" class="form-control" />
-                <span asp-validation-for="StartDateTime" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EndDateTime" class="control-label"></label>
-                <input asp-for="EndDateTime" class="form-control" />
+                <label asp-for="EndDateTime">End Date:</label>
+                <input type="date" id="EndTime" name="EndTime">
                 <span asp-validation-for="EndDateTime" class="text-danger"></span>
             </div>
-            
-            <div class="form-check-label">
-                <label asp-for="Status">
-                    <input asp-for="Status" />
-                    @Html.DisplayNameFor(model => model.Status)
-                </label>
-            </div>
+
+
+            @*<div class="form-check-label">
+            <label asp-for="Status">
+                <input asp-for="Status" />
+                @Html.DisplayNameFor(model => model.Status)
+            </label>
+        </div>*@
+
+            <label>* required fields </label>
 
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

@@ -24,6 +24,9 @@ namespace MyDayApp.DataAccess
             base.OnModelCreating(modelBuilder);
         }
 
+
+        //SET IDENTITY_INSERT ToDo ON
+
         public DbSet<User> User { get; set; }
 
         public DbSet<ToDo> ToDo { get; set; }

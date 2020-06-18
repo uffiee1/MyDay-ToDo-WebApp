@@ -10,7 +10,7 @@ namespace MyDayApp.Models
 {
     public class ToDo
     {
-        public int ID { get; set; }
+        public int ToDoID { get; set; }
 
         [Required]
         public string Event { get; set; }

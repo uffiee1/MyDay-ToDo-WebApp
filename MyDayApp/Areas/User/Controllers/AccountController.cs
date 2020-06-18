@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
+using MyDayApp.BusinessLogic.AccountLogic.Interfaces;
 using MyDayApp.Models;
 
 namespace MyDayApp.Controllers
@@ -17,15 +18,22 @@ namespace MyDayApp.Controllers
         /// <summary>
         /// These SignIn field is for logging in and creating users using the identity API
         /// </summary>
-        private readonly SignInManager<IdentityUser> signInManager;
-        private readonly UserManager<IdentityUser> userManager;
-        private readonly RoleManager<IdentityRole> roleManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ILogoutLogic _logoutLogic;
+        private readonly IRegisterLogic _registerLogic;
+        private readonly ILoginLogic _loginLogic;
 
-        public AccountController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, RoleManager<IdentityRole> roleManager)
+
+        public AccountController(
+            RoleManager<IdentityRole> roleManager,
+            ILogoutLogic logoutLogic,
+            IRegisterLogic registerLogic,
+            ILoginLogic loginLogic)
         {
-            this.signInManager = signInManager;
-            this.userManager = userManager;
-            this.roleManager = roleManager;
+            this._roleManager = roleManager;
+            this._logoutLogic = logoutLogic;
+            this._registerLogic = registerLogic;
+            this._loginLogic = loginLogic;
         }
         
         /// <summary>
@@ -36,8 +44,8 @@ namespace MyDayApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            await signInManager.SignOutAsync();
-            return RedirectToAction("Login", "Account");
+             _logoutLogic.Logout();
+             return RedirectToAction("Login", "Account");
         }
 
         //Login
@@ -55,15 +63,9 @@ namespace MyDayApp.Controllers
         {
             if (ModelState.IsValid)
             {
-               
-                var result = await signInManager.PasswordSignInAsync(model.Username, model.Password, model.Remember, false);
-
-                if (result.Succeeded)
-                {
-                    return RedirectToAction("Index", "Home");
-                    
-                }
-                ModelState.AddModelError(string.Empty, "Username of Wachtwoord is incorrect. Probeer het opnieuw.");
+                var user = new User { UserName = model.Username, PasswordHash = model.Password, };
+                await _loginLogic.Login(user);
+                return RedirectToAction("Index", "Home");
             }
             return View(model);
         }
@@ -71,10 +73,9 @@ namespace MyDayApp.Controllers
         [HttpGet]
         public IActionResult Register()
         {
-
             var account = new RegisterViewModel
             {
-                RoleItems = roleManager.Roles.Select(iR => new SelectListItem
+                RoleItems = _roleManager.Roles.Select(iR => new SelectListItem
                 {
                     Text = iR.Name,
                     Value = iR.Name
@@ -89,49 +90,15 @@ namespace MyDayApp.Controllers
             if (ModelState.IsValid)
             {
                 var user = new User { UserName = model.Username, Email = model.Email, };
-                var result = await userManager.CreateAsync((User)user, model.Password);
-
-                if (!await roleManager.RoleExistsAsync(Role.Gebruiker))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(Role.Gebruiker));
-                }
-                if (!await roleManager.RoleExistsAsync(Role.Administrator))
-                {
-                    await roleManager.CreateAsync(new IdentityRole(Role.Administrator));
-                }
-
-                //IdentityRole identityRole = new IdentityRole
-                //{
-                //    Name = model.RoleName
-                //};
-
-                //result = await roleManager.CreateAsync(identityRole);
-
-                if (result.Succeeded)
-                {
-                    if (model.RoleName == null)
-                    {
-                        await userManager.AddToRoleAsync(user, Role.Gebruiker);
-                    }
-
-                    await userManager.AddToRoleAsync(user, model.RoleName);
-
-                    await signInManager.SignInAsync(user, false);
-
-                    return RedirectToAction("Index", "Home");
-                }
-
-                foreach (var error in result.Errors)
-                {
-                    ModelState.AddModelError("", error.Description);
-                }
+                await _registerLogic.Register(user);
+                return RedirectToAction("Index", "Home");
             }
             return View(model);
         }
 
-        //public IActionResult AccesDenied()
-        //{
-        //    return View();
-        //}
+        public IActionResult AccesDenied()
+        {
+            return View();
+        }
     }
 }

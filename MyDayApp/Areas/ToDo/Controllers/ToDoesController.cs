@@ -9,8 +9,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using MyDayApp.Models;
 using Microsoft.AspNetCore.Identity;
+using MyDayApp.BusinessLogic.ToDoLogic.Interfaces;
 using MyDayApp.DataAccess;
-using Org.BouncyCastle.Bcpg;
 
 namespace MyDayApp.Controllers
 {
@@ -18,32 +18,33 @@ namespace MyDayApp.Controllers
     public class ToDoesController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IToDoLogic _toDoLogic;
 
-
-        [BindProperty] public ToDo Todo { get; set; }
-
-
-        public ToDoesController(AppDbContext context)
+        public ToDoesController(AppDbContext context, IToDoLogic toDoLogic)
         {
             _context = context;
+            _toDoLogic = toDoLogic;
         }
 
         // GET: ToDoes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(ToDo model)
         {
+
             //Lamda Expression
-            object result;
-            var claimsIdentity = (ClaimsIdentity) User.Identity;
+            IEnumerable<ToDo> result; 
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            model.UserId = claim.Value;
+
             if (User.IsInRole(Role.Administrator))
             {
-                result  =  await _context.ToDo.ToListAsync();
+                result = await _toDoLogic.GetAllToDoList(model);
             }
             else
-            { 
-               result =  await _context.ToDo.Where(user => user.User.Id == claim.Value).ToListAsync();
+            {
+                result = await _toDoLogic.GetAllToDoListAsUser(model);
             }
-            
+
             return View(result);
         }
 
@@ -56,7 +57,7 @@ namespace MyDayApp.Controllers
             }
 
             var toDo = await _context.ToDo
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.ToDoID == id);
             if (toDo == null)
             {
                 return NotFound();
@@ -85,8 +86,9 @@ namespace MyDayApp.Controllers
 
                 toDo.UserId = claim.Value;
 
+                await _toDoLogic.CreateToDo(toDo);
+
                 _context.Add(toDo);
-                await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
             return View(toDo);
@@ -112,9 +114,9 @@ namespace MyDayApp.Controllers
         // POST: ToDoes/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,Event,Location,Status,UserId")] ToDo toDo)
+        public async Task<IActionResult> Edit(int id, [Bind("ToDoID,Event,Location,Status,UserId")] ToDo toDo)
         {
-            if (id != toDo.ID)
+            if (id != toDo.ToDoID)
             {
                 return NotFound();
             }
@@ -125,21 +127,16 @@ namespace MyDayApp.Controllers
                 var claimsIdentity = (ClaimsIdentity) User.Identity;
                 var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
                 toDo.User = _context.User.FirstOrDefault(a => a.Id == claim.Value);
-              
+                
                 try
                 {
-                    _context.Update(toDo);
-                    await _context.SaveChangesAsync();
+                    await _toDoLogic.EditToDo(toDo);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ToDoExists(toDo.ID))
+                    if (!ToDoExists(toDo.ToDoID))
                     {
                         return NotFound();
-                    }
-                    else
-                    {
-                        throw;
                     }
                 }
                 return RedirectToAction(nameof(Index));
@@ -156,7 +153,7 @@ namespace MyDayApp.Controllers
             }
 
             var toDo = await _context.ToDo
-                .FirstOrDefaultAsync(m => m.ID == id);
+                .FirstOrDefaultAsync(m => m.ToDoID == id);
             if (toDo == null)
             {
                 return NotFound();
@@ -171,14 +168,15 @@ namespace MyDayApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var toDo = await _context.ToDo.FindAsync(id);
-            _context.ToDo.Remove(toDo);
-            await _context.SaveChangesAsync();
+            
+            await _toDoLogic.DeleteToDo(toDo);
+
             return RedirectToAction(nameof(Index));
         }
 
         private bool ToDoExists(int id)
         {
-            return _context.ToDo.Any(e => e.ID == id);
+            return _context.ToDo.Any(e => e.ToDoID == id);
         }
     }
 }

@@ -14,8 +14,15 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using MyDayApp.BusinessLogic.AccountLogic;
+using MyDayApp.BusinessLogic.AccountLogic.Interfaces;
+using MyDayApp.BusinessLogic.ToDoLogic;
+using MyDayApp.BusinessLogic.ToDoLogic.Interfaces;
+using MyDayApp.BusinessLogic.AdminLogic;
+using MyDayApp.BusinessLogic.AdminLogic.Interfaces;
 using MyDayApp.DataAccess;
 using MyDayApp.Models;
+using IdentityOptions = Microsoft.AspNetCore.Identity.IdentityOptions;
 
 namespace MyDayApp
 {
@@ -37,7 +44,8 @@ namespace MyDayApp
                 (Configuration.GetConnectionString("MyDay")));
 
             //This is for a Identity Check.
-            services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
+            //services.AddScoped<SignInManager<User>, SignInManager<User>>();
+            services.AddIdentity<User, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultUI()
                 .AddDefaultTokenProviders();
@@ -45,7 +53,7 @@ namespace MyDayApp
             //Add Minimal Requirements
             services.Configure<IdentityOptions>(options =>
             {
-                options.Password.RequiredLength = 8;
+                options.Password.RequiredLength = 6;
                 options.SignIn.RequireConfirmedEmail = false;
             });
 
@@ -57,12 +65,16 @@ namespace MyDayApp
                 options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
             });
 
+            //Logic
+            services.AddScoped<ILoginLogic, LoginLogic>();
+            services.AddScoped<ILogoutLogic, LogoutLogic>();
+            services.AddScoped<IRegisterLogic, RegisterLogic>();
+            services.AddScoped<IRoleLogic, RoleLogic>();
+            services.AddScoped<IToDoLogic, ToDoLogic>();
+            services.AddScoped<ILogger, Logger<ToDo>>();
 
             //This is for a Identity Check.
             //services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
-
-
-            //services.AddControllersWithViews(o => o.Filters.Add(new AuthorizeFilter()));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -92,7 +104,6 @@ namespace MyDayApp
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
-                //pattern: "{area=User}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
         }

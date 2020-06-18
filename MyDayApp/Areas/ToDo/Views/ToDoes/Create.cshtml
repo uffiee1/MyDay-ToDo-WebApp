@@ -13,7 +13,7 @@
         <form asp-action="Create" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Event">Task</label>
+                <label asp-for="Event">Task*</label>
                 <textarea asp-for="Event" class="form-control" rows="3" spellcheck="false" style="height: 75px;"></textarea>
                @* <input asp-for="Event" class="form-control" rows="3" spellcheck="false" style="height: 75px;" />*@
                 <span asp-validation-for="Event" class="text-danger"></span>
@@ -23,10 +23,34 @@
                 <input asp-for="Location" class="form-control" />
                 <span asp-validation-for="Location" class="text-danger"></span>
             </div>
+            
             <div class="form-group">
+                <label asp-for="Status">Status:*</label>
+                <select asp-for="Status" class="form-control">
+                    <option value="Not started yet">Not started yet</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Done">Done</option>
+                    <span asp-validation-for="Status" class="text-danger"></span>
+                </select>
+            </div>
+            
+
+            @*<div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
                 <input asp-for="Status" class="form-control" />
                 <span asp-validation-for="Status" class="text-danger"></span>
+            </div>*@
+            
+            <div class="form-group">
+                <label asp-for="StartDateTime">Start Date:</label>
+                <input type="date" id="StartTime" name="StartTime">
+                <span asp-validation-for="StartDateTime" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="EndDateTime">End Date:</label>
+                <input type="date" id="EndTime" name="EndTime">
+                <span asp-validation-for="EndDateTime" class="text-danger"></span>
             </div>
 
             @*<div class="form-group">
@@ -45,7 +69,7 @@
                 <span asp-validation-for="EndDateTime" class="text-danger"></span>
             </div>*@
 
-            
+        <label>* required fields </label>
 
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

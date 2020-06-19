@@ -14,15 +14,7 @@
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         
-        @*<a class="navbar-brand" href="#"><img src="./Assets/MyDayLogo1.png" alt=""></a>*@
-        @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>*@
-
-        @*<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>*@
+        <a class="navbar-brand" href="#"><img src="./Assets/MyDayLogo1.png" alt=""></a>
 
         <div class="collapse navbar-collapse" id="navbarColor01">
             <ul class="navbar-nav mr-auto">
@@ -38,21 +30,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" asp-area="User" asp-controller="Home" asp-action="Privacy">Privacy</a>
                 </li>
-                
 
-
-                @*@if (User.IsInRole(Role.Administrator))
-                {
-                    <li class="nav-item">
-                        <a class="nav-link " asp-area="Admin" asp-controller="Home" asp-action="Index">User</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " asp-area="Admin" asp-controller="Admin" asp-action="Users">User</a>
-                    </li>
-                }*@
-                
-                
                 @if (signInManager.IsSignedIn(User) && User.IsInRole("Admin"))
                 {
                     <li class="nav-item dropdown">
@@ -61,37 +39,13 @@
                             Manage
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            
-                            @*<li class="nav-item">
-                                <a class="nav-link text-white" asp-area="Admin" asp-controller="Admin" asp-action="CreateRole">Roles</a>
-                            </li>*@
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Role"
-                               asp-action="CreateRole">New Role</a>
-
+                               asp-action="CreateRole">Add New Role</a>
                             <a class="dropdown-item" asp-area="Admin" asp-controller="Role" 
                                asp-action="Index">User Roles</a>
-
-                            <a class="dropdown-item" asp-area="Admin" asp-controller="Admin"
-                               asp-action="ListUsers">Users</a>
                         </div>
                     </li>
                 }
-                
-          
-                
-
-                
-                
-                
-                
-                
-                
-                
-
-
-
-
-
                 @if (signInManager.IsSignedIn(User))
                 {
                     @*Dit is voor dropdown menu van ToDos*@
@@ -111,29 +65,8 @@
                     <li class="nav-item">
                         <a class="nav-link text-white" asp-area="User" asp-controller="Profile" asp-action="EditProfile">Profile</a>
                     </li>
-
-                    @*<li class="nav-item">
-                <form method="nav-link text-white" asp-area="User" asp-controller="Account" asp-action="Logout">
-                    <button type="submit" class="btn btn-outline-primary">
-                        @User.Identity.Name, Logout
-                    </button>
-                </form>
-            </li>*@
                 }
-                @*else
-                {
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="User" asp-controller="Account" asp-action="Login">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-area="User" asp-controller="Account" asp-action="Register">Register</a>
-                    </li>
-                }*@
             </ul>
-            @*<form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-            </form>*@
         </div>
         <partial name="_LoginPartial"/>
     </nav>
@@ -147,7 +80,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; Copyright 2020 @*- <a class="navbar-brand" href="#"><img src="./Assets/MyDayLogo.png" alt="logo"></a>*@
+            &copy; Copyright 2020 - MyDay ToDo WebApplication
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

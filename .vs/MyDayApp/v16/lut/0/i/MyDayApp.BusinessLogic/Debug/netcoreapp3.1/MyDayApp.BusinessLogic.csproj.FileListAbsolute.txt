@@ -1,6 +1,3 @@
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csprojAssemblyReference.cache
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfoInputs.cache
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.deps.json
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
@@ -258,5 +255,8 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.Busine
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\refs\WindowsBase.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfoInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csproj.CopyComplete
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.BusinessLogic\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csprojAssemblyReference.cache

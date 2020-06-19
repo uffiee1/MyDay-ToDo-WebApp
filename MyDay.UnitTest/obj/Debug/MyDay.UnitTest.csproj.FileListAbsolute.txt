@@ -1,0 +1,14 @@
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\MyDay.UnitTest.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\MyDay.UnitTest.pdb
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\obj\Debug\MyDay.UnitTest.csprojAssemblyReference.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\obj\Debug\MyDay.UnitTest.csproj.CoreCompileInputs.cache
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\obj\Debug\MyDay.UnitTest.csproj.CopyComplete
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\obj\Debug\MyDay.UnitTest.dll
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDay.UnitTest\obj\Debug\MyDay.UnitTest.pdb

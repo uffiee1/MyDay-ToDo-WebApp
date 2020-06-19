@@ -255,7 +255,6 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.DataAc
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.DataAccess\Debug\netcoreapp3.1\refs\System.Xml.XPath.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.DataAccess\Debug\netcoreapp3.1\refs\System.Xml.XPath.XDocument.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\b\MyDayApp.DataAccess\Debug\netcoreapp3.1\refs\WindowsBase.dll
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.DataAccess\Debug\netcoreapp3.1\MyDayApp.DataAccess.csprojAssemblyReference.cache
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.DataAccess\Debug\netcoreapp3.1\MyDayApp.DataAccess.AssemblyInfoInputs.cache
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.DataAccess\Debug\netcoreapp3.1\MyDayApp.DataAccess.AssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp.DataAccess\Debug\netcoreapp3.1\MyDayApp.DataAccess.csproj.CopyComplete

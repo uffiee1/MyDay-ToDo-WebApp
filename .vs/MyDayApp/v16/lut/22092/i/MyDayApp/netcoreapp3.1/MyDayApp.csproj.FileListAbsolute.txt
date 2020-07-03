@@ -1,5 +1,0 @@
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp\netcoreapp3.1\MyDayApp.AssemblyInfoInputs.cache
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp\netcoreapp3.1\MyDayApp.AssemblyInfo.cs
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp\netcoreapp3.1\MyDayApp.RazorAssemblyInfo.cache
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp\netcoreapp3.1\MyDayApp.RazorAssemblyInfo.cs
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\.vs\MyDayApp\v16\lut\0\i\MyDayApp\netcoreapp3.1\MyDayApp.csprojAssemblyReference.cache

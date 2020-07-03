@@ -31,8 +31,10 @@ namespace MyDayApp.Models
         public string Label { get; set; }
 
         //[Required]
-        public DataType StartDateTime { get; set; }
+        public DateTime StartDateTime { get; set; }
 
-        public DataType EndDateTime { get; set; }
+
+
+        public DateTime EndDateTime { get; set; }
     }
 }

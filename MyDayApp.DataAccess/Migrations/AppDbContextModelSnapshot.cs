@@ -255,13 +255,13 @@ namespace MyDayApp.DataAccess.Migrations
 
             modelBuilder.Entity("MyDayApp.Models.ToDo", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("ToDoID")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("EndDateTime")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("EndDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Event")
                         .IsRequired()
@@ -273,8 +273,8 @@ namespace MyDayApp.DataAccess.Migrations
                     b.Property<string>("Location")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StartDateTime")
-                        .HasColumnType("int");
+                    b.Property<DateTime>("StartDateTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Status")
                         .HasColumnType("nvarchar(max)");
@@ -282,7 +282,7 @@ namespace MyDayApp.DataAccess.Migrations
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.HasKey("ID");
+                    b.HasKey("ToDoID");
 
                     b.HasIndex("UserId");
 

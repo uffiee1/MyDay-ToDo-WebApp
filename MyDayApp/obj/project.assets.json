@@ -3700,10 +3700,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.BusinessLogic.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "MyDayApp.DataAccess/1.0.0": {
         "type": "project",
@@ -3724,10 +3721,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.DataAccess.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "MyDayApp.Models/1.0.0": {
         "type": "project",
@@ -3745,10 +3739,7 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.Models.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       }
     }
   },

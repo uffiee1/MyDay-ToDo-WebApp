@@ -2974,7 +2974,10 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.DataAccess.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       },
       "MyDayApp.Models/1.0.0": {
         "type": "project",
@@ -2992,7 +2995,10 @@
         },
         "runtime": {
           "bin/placeholder/MyDayApp.Models.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
@@ -9085,6 +9091,9 @@
           }
         ],
         "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }

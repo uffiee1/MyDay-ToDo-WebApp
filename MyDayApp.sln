@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDayApp.Models", "MyDayApp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDayApp.BusinessLogic", "MyDayApp.BusinessLogic\MyDayApp.BusinessLogic.csproj", "{2FC16D8C-37A0-4BC9-AD01-CCABB741C9B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDay.UnitTest", "MyDay.UnitTest\MyDay.UnitTest.csproj", "{1767B0D7-AFD4-464D-BE46-25E16B3FF4EF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{2FC16D8C-37A0-4BC9-AD01-CCABB741C9B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FC16D8C-37A0-4BC9-AD01-CCABB741C9B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FC16D8C-37A0-4BC9-AD01-CCABB741C9B9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1767B0D7-AFD4-464D-BE46-25E16B3FF4EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1767B0D7-AFD4-464D-BE46-25E16B3FF4EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1767B0D7-AFD4-464D-BE46-25E16B3FF4EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1767B0D7-AFD4-464D-BE46-25E16B3FF4EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

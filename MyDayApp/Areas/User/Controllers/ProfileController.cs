@@ -36,13 +36,13 @@ namespace MyDayApp.Areas.User.Controllers
             var model = new UserViewModel()
             {
                 Id = user.Id,
-                //Firstname = user.Firstname,
-                //Surname = user.Surname,
+                FirstName = user.FirstName,
+                Surname = user.LastName,
                 Email = user.Email,
                 UserName = user.UserName,
-                Password = user.PasswordHash
+                Password = user.PasswordHash,
+                Age = user.DateOfBirth
                 
-                //Age = user.Age
             };
 
             return View(model);
@@ -63,11 +63,11 @@ namespace MyDayApp.Areas.User.Controllers
                 }
 
                 user.UserName = model.UserName;
-                //user.Firstname = model.Firstname;
-                //user.SurName = model.Surname;
+                user.FirstName = model.FirstName;
+                user.LastName = model.Surname;
                 user.Email = model.Email;
-                //user.Age = model.Age;
                 user.PasswordHash = model.Password;
+                user.DateOfBirth = model.Age;
                 
                 
                 var result = await userManager.UpdateAsync(user);

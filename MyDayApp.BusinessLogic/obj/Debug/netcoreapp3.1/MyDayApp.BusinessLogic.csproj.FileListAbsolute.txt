@@ -6,7 +6,6 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcore
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.AssemblyInfo.cs
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.pdb
-C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csproj.CoreCompileInputs.cache
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -267,3 +266,4 @@ C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcore
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\MyDayApp.DataAccess.pdb
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\bin\Debug\netcoreapp3.1\MyDayApp.Models.pdb
 C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csproj.CopyComplete
+C:\Users\Ufuk\Documents\GitHub\MyDayApp\MyDayApp.BusinessLogic\obj\Debug\netcoreapp3.1\MyDayApp.BusinessLogic.csproj.CoreCompileInputs.cache

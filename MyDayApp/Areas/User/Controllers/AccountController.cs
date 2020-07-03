@@ -67,6 +67,8 @@ namespace MyDayApp.Controllers
                 await _loginLogic.Login(user);
                 return RedirectToAction("Index", "Home");
             }
+
+            ModelState.AddModelError(string.Empty, "Email en/of Wachtwoord is incorrect. Probeer het opnieuw.");
             return View(model);
         }
 

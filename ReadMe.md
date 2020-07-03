@@ -1,6 +1,6 @@
 # MyDay ToDo Web-App
 
-A To-Do List Application
+A To-Do List Application  
 It doesn't matter who you are and what you do.  
 - You will be better organized! At home, at work and in your free time  
 - You will focus on really important things!  
